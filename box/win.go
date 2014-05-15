@@ -23,8 +23,8 @@ func (t *Box) CheckWinAndAdd() Status {
 	}
 	i := rand.Intn(len(t))
 	j := rand.Intn(len(t))
-	for x := 0; x < 4; x++ {
-		for y := 0; y < 4; y++ {
+	for x := 0; x < len(t); x++ {
+		for y := 0; y < len(t); y++ {
 			if t[i%len(t)][j%len(t)] == 0 {
 				t[i%len(t)][j%len(t)] = 2 << (rand.Uint32() % 2)
 				return Add
