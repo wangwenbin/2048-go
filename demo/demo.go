@@ -27,11 +27,11 @@ A:
 		case box.Win:
 			str := "Win!!"
 			strl := len(str)
-			box.CoverPrintStr(x/2-strl/2, y/2, str, 100, 222)
+			box.CoverPrintStr(x/2-strl/2, y/2, str, termbox.ColorMagenta, termbox.ColorYellow)
 		case box.Lose:
 			str := "Lose!!"
 			strl := len(str)
-			box.CoverPrintStr(x/2-strl/2, y/2, str, 354, 222)
+			box.CoverPrintStr(x/2-strl/2, y/2, str, termbox.ColorBlack, termbox.ColorRed)
 		case box.Add:
 		//	b.Print(x/2-10, y/2-4)
 		default:
