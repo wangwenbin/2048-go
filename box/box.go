@@ -4,3 +4,11 @@
 package box
 
 type Box [4][4]int
+
+var Score int
+var step int
+
+func Clear() {
+	Score = 0
+	step = 0
+}

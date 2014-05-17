@@ -24,13 +24,17 @@ func (t Box) Print(ox, oy int) error {
 	fg := termbox.ColorYellow
 	bg := termbox.ColorBlack
 	termbox.Clear(fg, bg)
-	str := " Use ESC exit!"
+	str := "  SCORE: " + fmt.Sprint(Score)
+	for n, c := range str {
+		termbox.SetCell(ox+n, oy-1, c, fg, bg)
+	}
+	str = "ESC:exit " + "Enter:replay"
 	for n, c := range str {
 		termbox.SetCell(ox+n, oy-2, c, fg, bg)
 	}
-	str = " Use Enter replay!"
+	str = "Play with arrow key!"
 	for n, c := range str {
-		termbox.SetCell(ox+n, oy-1, c, fg, bg)
+		termbox.SetCell(ox+n, oy-3, c, fg, bg)
 	}
 	fg = termbox.ColorBlack
 	bg = termbox.ColorGreen

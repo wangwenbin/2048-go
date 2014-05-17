@@ -37,6 +37,7 @@ Lable:
 	case termbox.EventError:
 		panic(ev.Err)
 	}
+	step++
 	return ev.Key
 }
 
@@ -71,6 +72,7 @@ func (t *Box) MergeUP() bool {
 			if t[x][i] == t[x+1][i] {
 				t[x][i] *= 2
 				t[x+1][i] = 0
+				Score += t[x][i] * step
 				x++
 				changed = true
 				//	n--

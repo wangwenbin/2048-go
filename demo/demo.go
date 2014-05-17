@@ -19,6 +19,7 @@ func Go() {
 
 A:
 	b := box.Box{}
+	box.Clear()
 	for {
 		st := b.CheckWinAndAdd()
 		x, y := termbox.Size()
