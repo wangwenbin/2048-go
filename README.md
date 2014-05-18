@@ -22,7 +22,9 @@ I have not got 2048 yet. If you get there, share me with your Screenshot.
 
 ##Get binnary.
 
-The binnary is avilable on gobuild.io
+The binnary is avilable on *gobuild.io*.
+
+Thanks for gobuild.
 
 [Down on gobuild.io](http://gobuild.io/download/github.com/wangwenbin/2048-go)
 
