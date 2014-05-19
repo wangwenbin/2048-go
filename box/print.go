@@ -24,15 +24,15 @@ func (t Box) Print(ox, oy int) error {
 	fg := termbox.ColorYellow
 	bg := termbox.ColorBlack
 	termbox.Clear(fg, bg)
-	str := "  SCORE: " + fmt.Sprint(Score)
+	str := []rune("  成 绩  : " + fmt.Sprint(Score))
 	for n, c := range str {
 		termbox.SetCell(ox+n, oy-1, c, fg, bg)
 	}
-	str = "ESC:exit " + "Enter:replay"
+	str = []rune("ESC:退 出  " + " Enter:重 玩")
 	for n, c := range str {
 		termbox.SetCell(ox+n, oy-2, c, fg, bg)
 	}
-	str = "Play with arrow key!"
+	str = []rune("用 方 向 键 ← ↑ ↓ → 游 戏 ! ")
 	for n, c := range str {
 		termbox.SetCell(ox+n, oy-3, c, fg, bg)
 	}
